@@ -1,0 +1,82 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas,monaco,monospace;
+}
+
+body {
+  background-color: #232735;
+  font-size: 16px;
+}
+
+.chat .userlist {
+  float: right;
+  top: 20px;
+  display: none;
+}
+
+.chat .status {
+  border: 0;
+  width: 100%;
+  bottom: 42px;
+  position: absolute;
+  color: #20f440;
+}
+
+/*.chat .status ul{
+  left: 50%;
+}
+
+.chat .status li{
+  padding: 5px 10px;
+  float: left;
+  position: relative;
+  right: 50%;
+}*/
+
+.chat form {
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat form input {
+  color: #20f440;
+  border: 2px solid #20f440;
+  padding: 10px;
+  width: 100%;
+  margin-right: .5%;
+  background-color: #232735;
+}
+
+.chat form button {
+  display: none;
+/*  width: 9%;
+  background: rgb(130, 224, 255);
+  border: none;
+  padding: 10px;*/
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages li {
+  color: #20f440;
+  padding: 0 0 0 11px;
+}
+
+#messages .notice{
+  color: #aab2bf;
+}
+
+#messages .welcome{
+  font-size: 25px;
+}
+
+#messages li:nth-child(odd) {
+
+}

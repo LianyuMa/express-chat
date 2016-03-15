@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Express Framework Chatroom
+    link(rel='stylesheet', href='/stylesheets/login_signup.css')
+    meta(name='viewport', content="width=device-width", initial-scale=1)
+  body
+    .login
+      form(method='POST' action='/signup')
+        h1
+          label Sign up
+        .inset
+          p
+            label(for='username') USERNAME
+            input(type='text', name='username', required)
+          p
+            label(for='password') PASSWORD
+            input(type='password', name='password', required)
+        p.p-container
+          span
+            a(href='/') Login 
+          input(type='submit', value='Sign up')
