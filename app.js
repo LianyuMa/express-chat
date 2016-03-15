@@ -29,20 +29,6 @@ function compile(str, path) {
   return stylus(str).set('filename', path).use(nib());
 }
 
-// var sessionMiddleware = session({
-//     store: new RedisStore({}), // XXX redis server config
-//     secret: "lianyuma",
-// });
-
-// var sessionMiddleware = session({
-//   name: 'sid',
-//   store: sessionStore, // MemoryStore
-//   secret: 's3cr37',
-//   saveUninitialized: true,
-//   resave: true,
-// });
-
-
 app.use(sessionMiddleware);
 
 // view engine setup
@@ -69,9 +55,6 @@ app.use(stylus.middleware(
 //                   store: sessionStore
 // }));
 
-// app.use(session({ 
-//                   secret: 'secret' }));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
@@ -90,13 +73,6 @@ app.use(function (req, res, next) {
     if (msg) res.locals.message = '<p class="msg success">' + msg + '</p>';
     next();
 });
-
-
-
-
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -128,6 +104,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;

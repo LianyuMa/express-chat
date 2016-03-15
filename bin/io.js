@@ -1,17 +1,5 @@
 var io = require('socket.io')();
 
-// //express_session
-// var session = require('express-session');
-
-// var RedisStore = require("connect-redis")(session);
-
-// var sessionMiddleware = session({
-//     store: new RedisStore({}), // XXX redis server config
-//     secret: "lianyuma",
-//     resave: true,
-//     saveUninitialized: true
-// });
-
 //session
 var module_session = require('./module_session');
 
@@ -34,9 +22,7 @@ io.sockets.on('connection', function(socket) {
       username: curname.username
   });
 
-  //console.log('Session: ', socket.request.session.user);
   socket.on('new user', function(username) {
-  //socket.username = socket.handshake.session.user;
     socket.username = curname.username;
     socket.broadcast.emit('hi', {
       username: socket.username

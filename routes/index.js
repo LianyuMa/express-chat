@@ -1,13 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-
-
-
 var hash = require('../bin/pass').hash;
 var app = express();
 var mongoose = require('mongoose');
@@ -76,7 +69,6 @@ router.get('/', function(req, res, next) {
   }
   else {
     res.render('login');
-    // res.send("<a href='/login'> Login</a>" + "<br>" + "<a href='/signup'> Sign Up</a>");
     console.log('login + signup');
   }
 });
@@ -89,7 +81,6 @@ router.get('/signup', function(req, res) {
     res.redirect('/');
   }else {
     res.render('signup');
-    // res.render('login', {action: 'submit'});
   }
 });
 
@@ -146,9 +137,5 @@ router.get('/logout', function (req, res) {
         res.redirect('/');
     });
 });
-
-
-
-
 
 module.exports = router;
