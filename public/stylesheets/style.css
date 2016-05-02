@@ -9,6 +9,10 @@ body {
   font-size: 16px;
 }
 
+.ribbons {
+  z-index: 10;
+}
+
 .chat .userlist {
   float: right;
   top: 20px;
@@ -58,25 +62,26 @@ body {
   padding: 10px;*/
 }
 
-#messages {
+.messages {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  /*height: 80%;*/
 }
 
-#messages li {
+.messages li {
   color: #20f440;
   padding: 0 0 0 11px;
 }
 
-#messages .notice{
+.messages .notice{
   color: #aab2bf;
 }
 
-#messages .welcome{
+.messages .welcome{
   font-size: 25px;
 }
 
-#messages li:nth-child(odd) {
+.messages li:nth-child(odd) {
 
 }

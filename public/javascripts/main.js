@@ -23,14 +23,14 @@ $(function() {
   socket.on('greeting', function(data) {
     clientname = data.username;
 
-    $('#messages').append($('<li class="welcome">').text('Welcome to chatroom: ' + clientname));
+    $('.messages').append($('<li class="welcome">').text('Welcome to chatroom: ' + clientname));
       
   });
 
   socket.emit('new user', clientname);
 
   socket.on('hi', function(data) {
-    $('#messages').append($('<li class="notice">').text(getCurTime() + " " + data.username + ' connected'));
+    $('.messages').append($('<li class="notice">').text(getCurTime() + " " + data.username + ' connected'));
   });
 
       
@@ -82,7 +82,7 @@ $(function() {
   });
 
   function outputMessage (data) {
-    $('#messages').append($('<li>').text(getCurTime() + " " + data.username + ": " + data.message));
+    $('.messages').append($('<li>').text(getCurTime() + " " + data.username + ": " + data.message));
   }
 
   socket.on('output message', function(data) {
@@ -90,6 +90,7 @@ $(function() {
       username: data.username,
       message: data.message
     });
+    $('.messages')[0].scrollTop = $('.messages')[0].scrollHeight;
   });
 
   function outputStatus (data) {
@@ -118,7 +119,7 @@ $(function() {
 
   //broadcast messages when someone disconnects
   socket.on('bye', function(data) {
-    $('#messages').append($('<li class="notice">').text(getCurTime() + " " + data.username + ' left'));
+    $('.messages').append($('<li class="notice">').text(getCurTime() + " " + data.username + ' left'));
   });
 
 
