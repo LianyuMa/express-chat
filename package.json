@@ -12,7 +12,7 @@
     "debug": "*",
     "dompurify": "^0.8.0",
     "errorhandler": "*",
-    "express": "*",
+    "express": "4.13.4",
     "express-session": "*",
     "jade": "*",
     "method-override": "^2.3.6",
