@@ -2,7 +2,7 @@
 
 A simple chatroom built with Node.js, Express, MongoDB and Socket.io.
 
-[![Build Status](https://travis-ci.org/LianyuMa/express-chatroom.png)](https://travis-ci.org/LianyuMa/express-chatroom) [![Dependencies Status](https://david-dm.org/LianyuMa/express-chatroom.svg)](https://david-dm.org/LianyuMa/express-chatroom)
+[![Build Status](https://travis-ci.org/LianyuMa/express-chatroom.svg)](https://travis-ci.org/LianyuMa/express-chatroom) [![Dependencies Status](https://david-dm.org/LianyuMa/express-chatroom.svg)](https://david-dm.org/LianyuMa/express-chatroom)
 
 ## Live Demo
 
